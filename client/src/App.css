@@ -1,0 +1,28 @@
+
+body{
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  background-color: white !important;
+}
+.title{
+font-weight: bold;
+color: #1455a0;
+}
+button{
+  background: #1455a0 !important;
+  color: white !important;
+}
+.ant-modal-mask {
+  background: transparent !important;
+  opacity: 0.3;
+}
+  body{
+    background-image: url('./images/i1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    margin: 0% !important;
+  
+  }
