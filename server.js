@@ -17,27 +17,27 @@ mongoose.connect(mongoURI,{useNewUrlParser:true,useCreateIndex:true})
 .then(()=>console.log("db connected"))
 .catch(err=>console.log(err))
 const port=process.env.PORT||5000;
-if(process.env.NODE_ENV==="production"){
+
     app.use(express.static('client/build'));
     app.get('*',(req,res)=>{
         res.sendFile(path.resolve(__dirname,'client','build','index.html'));
     })
-}
 
 
-const server = http.createServer((req, res) => {
-	res.statusCode = 200;
-  	res.setHeader('Content-Type', 'text/plain');
-  	res.end('Sysmon App is Up and Running!\n');
-});
 
-server.listen(port, hostname, () => {
-  	console.log(`Server running at http://${hostname}:${port}/`);
-});
+// const server = http.createServer((req, res) => {
+// 	res.statusCode = 200;
+//   	res.setHeader('Content-Type', 'text/plain');
+//   	res.end('Sysmon App is Up and Running!\n');
+// });
+
+// server.listen(port, hostname, () => {
+//   	console.log(`Server running at http://${hostname}:${port}/`);
+// });
 
 // var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
 // var server_host = process.env.YOUR_HOST || '0.0.0.0';
 // app.listen(server_port, server_host, function() {
 //     console.log('Listening on port %d', server_port);
 // });
-//app.listen(port,()=>console.log("Server connected to port 5000"))
+app.listen(port,()=>console.log("Server connected to port 5000"))
