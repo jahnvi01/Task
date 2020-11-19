@@ -115,7 +115,8 @@ orders.findById(_id)
 
 exports.showOrders = (req, res) => {
  var username=req.body.username
-    orders.find({username})
+    orders.findOne({username})
+.sort({createdAt:1})
     .populate('order','_id name pricePerScoop')
              .exec((err, data) => {
             if (err) {

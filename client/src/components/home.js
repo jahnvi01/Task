@@ -324,8 +324,7 @@ return items;
     const handleCancelDel = e => {
       setId("")
 
-
-  setVisibleUpd(false)
+  setVisibleDel(false)
     }
     const handleCancelUpd = e => {
       setItem("")
